@@ -1,0 +1,58 @@
+{
+    "name": "beastbytes/antispam",
+    "description": "AntiSpam for Yii forms.",
+    "keywords": [
+        "AntiSpam",
+        "Form",
+        "Hash",
+        "HoneyPot",
+        "Spam",
+        "Yii"
+    ],
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Chris Yates",
+            "email": "chris.l.yates@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "psr/http-factory": "^1.0",
+        "psr/http-message": "^1.0",
+        "psr/http-server-middleware": "^1.0",
+        "yiisoft/assets": "^4.0",
+        "yiisoft/event-dispatcher": "^1.0",
+        "yiisoft/form": "dev-master",
+        "yiisoft/html": "^3.0",
+        "yiisoft/http": "^1.0",
+        "yiisoft/view": "^8.0"
+    },
+    "require-dev": {
+        "httpsoft/http-message": "^1.1",
+        "psr/container": "^2.0",
+        "psr/http-server-handler": "^1.0",
+        "phpunit/phpunit": "^10.0",
+        "roave/infection-static-analysis-plugin": "^1.0",
+        "roave/security-advisories": "dev-latest",
+        "vimeo/psalm": "^5.0",
+        "yiisoft/test-support": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "BeastBytes\\AntiSpam\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BeastBytes\\AntiSpam\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "infection": "roave-infection-static-analysis-plugin --log-verbosity=all --debug",
+        "psalm": "psalm",
+        "robo": "robo",
+        "test": "phpunit --testdox"
+    }
+}
